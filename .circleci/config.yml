@@ -35,3 +35,12 @@ jobs:
 
       # run tests!
       - run: yarn test
+
+      - run: yarn build
+
+       # Deploy with Surge task
+      - deploy:
+          command: |
+            yarn deploy
+  
+    
