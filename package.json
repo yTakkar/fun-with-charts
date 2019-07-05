@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./public/index.html -p 4000"
+    "start": "parcel ./public/index.html -p 4000",
+    "build": "parcel build ./public/index.html --public-url ./",
+    "deploy": "yarn build && surge -p dist -d https://fun-with-charts.surge.sh"
   },
   "keywords": [],
   "author": "",
